@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-gray-800 bg-gray-50 antialiased;
+    margin: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    input[type='password']::-ms-reveal,
+    input[type='password']::-ms-clear {
+      display: none;
+    }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-white/80 rounded-lg mx-3 transition-all duration-200 hover:bg-white/10 hover:text-white;
+  }
+  .sidebar-item-active {
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-white font-medium rounded-lg mx-3 bg-white/15 border-l-4 border-dsu-gold;
+  }
+  .stat-card {
+    @apply bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow;
+  }
+  .section-title {
+    @apply font-heading text-lg font-semibold text-gray-800 uppercase tracking-wide;
+  }
+}
